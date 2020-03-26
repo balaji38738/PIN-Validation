@@ -4,4 +4,16 @@
 #Author:- Balaji Ijjapwar
 #Date:- 26 March 2020
 
-printf "PIN validation Programme\n"
+printf "PIN validation Programme\n\n"
+
+shopt -s extglob
+pattern="[0-9]{6}"
+read -p "Enter PIN: " pin
+
+if [[ $pin =~ $pattern ]]
+then
+	printf "Valid PIN\n"
+else
+	printf "Invalid PIN\n"
+fi
+
