@@ -7,7 +7,7 @@
 printf "PIN validation Programme\n\n"
 
 shopt -s extglob
-pattern="^[0-9]{6}"
+pattern="^[0-9]{6}$"
 read -p "Enter PIN: " pin
 
 if [[ $pin =~ $pattern ]]
